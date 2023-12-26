@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "projects/*",
+      "setup/*"
+    ]
+  },
+  "dependencies": {
+    "eslint": "8.14.0",
+    "prettier": "2.6.2",
+    "styled-components": "^6.1.3",
+    "@types/node": "20.10.5",
+    "@types/jest": "29.5.11",
+    "@types/react": "18.2.45",
+    "typescript": "4.5.5",
+    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/parser": "6.16.0"
+  },
+  "scripts": {
+    "lint": "yarn workspaces run lint",
+    "web-public": "yarn workspace @alura/web-public",
+    "dev:web-public": "yarn web-public dev",
+    "build:web-public": "yarn web-public build",
+    "start:web-public": "yarn web-public start",
+    "test:web-public": "yarn web-public test",
+    "lint:web-public": "yarn web-public lint",
+    "design-system": "yarn workspace @alura/design-system",
+    "test:design-system": "yarn design-system test",
+    "utils": "yarn workspace @alura/utils",
+    "test:utils": "yarn utils test"
+  }
+}
